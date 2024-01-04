@@ -25,4 +25,4 @@ function MoviesSection({ title, movies }) {
   );
 }
 
-export { MoviesSection };
+export default MoviesSection;

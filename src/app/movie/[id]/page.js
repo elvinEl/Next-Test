@@ -1,11 +1,14 @@
+import { notFound } from "next/navigation";
 import React from "react";
-import { MovieContainer } from "../../../../containers/movie";
+import  MovieContainer  from "../../../../containers/movie";
 import Movies from "../../../../mocks/movies.json";
 function MoviePage({ params }) {
   const movieDetail = Movies.results.find(
     (movie) => movie.id.toString() === params.id
   );
-  console.log(params);
+  if (!movieDetail) {
+    notFound();
+  }
   return <MovieContainer movie={movieDetail} />;
 }
 

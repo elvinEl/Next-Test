@@ -4,4 +4,4 @@ function MovieContainer({ movie }) {
   return <FeaturedMovie movie={movie} isCompact={false} />;
 }
 
-export { MovieContainer };
+export default MovieContainer;
